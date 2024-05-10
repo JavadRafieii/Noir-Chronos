@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Added Roboto Font */
+@font-face {
+    font-family: "Roboto-Black";
+    src: url(../public/fonts/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    src: url(../public/fonts/Roboto/Roboto-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../public/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-BoldItalic";
+    src: url(../public/fonts/Roboto/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Italic";
+    src: url(../public/fonts/Roboto/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../public/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-LightItalic";
+    src: url(../public/fonts/Roboto/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../public/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic";
+    src: url(../public/fonts/Roboto/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../public/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(../public/fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-ThinItalic";
+    src: url(../public/fonts/Roboto/Roboto-ThinItalic.ttf);
+}
+
+/* Added Roboto Font */
+
+/* Added Sacramento Font */
+@font-face {
+    font-family: "Sacramento-Regular";
+    src: url(../public/fonts/Sacramento/Sacramento-Regular.ttf);
+}
+/* Added Sacramento Font */
+
+/* Added bacground color to body */
+body {
+    @apply bg-dark-gray
+}
+/* Added bacground color to body */
