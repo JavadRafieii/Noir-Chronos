@@ -1,5 +1,21 @@
+import Container from "@/theme/container";
+import Image from "next/image";
 import MainSlider from "@/components/mainSlider/mainSlider";
 import GalleryCard from "@/components/categoryCard/galleryCard";
+import { height } from "@mui/system";
+
+const imageStyleSelling1 = {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "14% 0 14% 14%",
+}
+const imageStyleSelling2 = {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "14% 14% 14% 0",
+}
 
 export default function HomePage() {
   return (
@@ -19,7 +35,7 @@ export default function HomePage() {
           />
         </div>
         <div>
-          <GalleryCard 
+          <GalleryCard
             img={"/images/banner-2.jpeg"}
             title={"Bold Pulse"}
             subTitle={"Men's Watches"}
@@ -27,7 +43,7 @@ export default function HomePage() {
           />
         </div>
         <div>
-          <GalleryCard 
+          <GalleryCard
             img={"/images/banner-3.webp"}
             title={"Swift Chic"}
             subTitle={"Unisex Watchwes"}
@@ -36,6 +52,45 @@ export default function HomePage() {
         </div>
       </div>
       {/* Gallery section */}
+
+      {/* Best selling section */}
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-20">
+          <div>
+            <div className="h-full flex flex-col justify-center items-start gap-5">
+              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl">Best Selling</h4>
+              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl">Discounts up to 20% are waiting for you…</h3>
+              <p className="font-Roboto-Medium text-light-gray text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
+              <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white">Explore Now</button>
+            </div>
+          </div>
+          <div>
+            <figure className="relative">
+              <div className="w-[60%] relative z-0 top-10">
+                <Image
+                  src={"/images/best-selling-2.webp"}
+                  alt="..."
+                  width={0}
+                  height={0}
+                  sizes='100vw'
+                  style={imageStyleSelling2}
+                />
+              </div>
+              <div className="w-[60%] absolute right-0 top-0">
+                <Image
+                  src={"/images/best-selling-1.jpeg"}
+                  alt="..."
+                  width={0}
+                  height={0}
+                  sizes='100vw'
+                  style={imageStyleSelling1}
+                />
+              </div>
+            </figure>
+          </div>
+        </div>
+      </Container>
+      {/* Best selling section */}
     </main>
   );
 };
