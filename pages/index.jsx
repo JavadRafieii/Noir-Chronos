@@ -16,6 +16,12 @@ const imageStyleSelling2 = {
   objectFit: "cover",
   borderRadius: "14% 14% 14% 0",
 }
+const imageStyleElite = {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "14% 14% 14% 0",
+}
 
 export default function HomePage() {
   return (
@@ -91,6 +97,36 @@ export default function HomePage() {
         </div>
       </Container>
       {/* Best selling section */}
+
+      {/* Elite elegance section */}
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
+          <div className="order-2 md:order-1">
+            <figure>
+              <Image
+                src={"/images/elite-elegance.webp"}
+                alt="..."
+                width={0}
+                height={0}
+                sizes='100vw'
+                style={imageStyleElite}
+              />
+            </figure>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="h-full flex flex-col justify-center items-start gap-5">
+              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl">Elite Elegance</h4>
+              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl">Timepieces, Beyond Imagination</h3>
+              <p className="font-Roboto-Medium text-light-gray text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
+              <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row sm:items-center md:items-start lg:items-center gap-3">
+                <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white">SHOP MEN'S WATCHES</button>
+                <button className="bg-dark-gray py-3 px-6 rounded-md font-Roboto-light text-sm text-white border duration-[.5s] hover:bg-white hover:text-dark-gray">SHOP WOMEN'S WATCHES</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+      {/* Elite elegance section */}
     </main>
   );
 };
