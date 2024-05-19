@@ -2,7 +2,7 @@ import Container from "@/theme/container";
 import Image from "next/image";
 import MainSlider from "@/components/mainSlider/mainSlider";
 import GalleryCard from "@/components/galleryCard/galleryCard";
-import ProductCard from "@/components/productCard/productCard";
+import TrendingProducts from "@/components/trendingProducts/trendingProducts";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -128,13 +128,15 @@ export default function HomePage() {
       </Container>
       {/* Elite elegance section */}
 
-
-      <div className="grid grid-cols-4">
-        <div>
-          <ProductCard />
-        </div>
+      {/* Trending products section */}
+      <div className="py-10">
+        <Container>
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Best Selling</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center my-5">TRENDING PRODUCTS</h3>
+        </Container>
+        <TrendingProducts />
       </div>
-
+      {/* Trending products section */}
     </main>
   );
 };
