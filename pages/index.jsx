@@ -1,8 +1,8 @@
 import Container from "@/theme/container";
 import Image from "next/image";
 import MainSlider from "@/components/mainSlider/mainSlider";
-import GalleryCard from "@/components/categoryCard/galleryCard";
-import { height } from "@mui/system";
+import GalleryCard from "@/components/galleryCard/galleryCard";
+import ProductCard from "@/components/productCard/productCard";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -127,6 +127,14 @@ export default function HomePage() {
         </div>
       </Container>
       {/* Elite elegance section */}
+
+
+      <div className="grid grid-cols-4">
+        <div>
+          <ProductCard />
+        </div>
+      </div>
+
     </main>
   );
 };

@@ -198,3 +198,7 @@ body {
 }
 
 /* Main slider style */
+
+.sale-line {
+    @apply relative before:content-[""] before:block before:absolute before:left-0 before:top-2 before:w-full before:h-[1px] before:bg-light-gray
+}
