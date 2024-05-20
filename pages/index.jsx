@@ -5,6 +5,7 @@ import GalleryCard from "@/components/galleryCard/galleryCard";
 import TrendingProducts from "@/components/trendingProducts/trendingProducts";
 import BannerCard from "@/components/bannerCard/bannerCard";
 import LimitedProducts from "@/components/limitedProducts/limitedProducts";
+import Blogs from "@/components/blogs/blogs";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -170,7 +171,17 @@ export default function HomePage() {
         <LimitedProducts />
       </div>
       {/* 360° Collection section */}
-      
+
+      {/* Blog section */}
+      <Container>
+        <div className="py-10">
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Happenings Around</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">Blog posts</h3>
+          <Blogs />
+        </div>
+      </Container>
+      {/* Blog section */}
+
     </main>
   );
 };
