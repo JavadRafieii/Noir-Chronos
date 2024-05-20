@@ -3,6 +3,7 @@ import Image from "next/image";
 import MainSlider from "@/components/mainSlider/mainSlider";
 import GalleryCard from "@/components/galleryCard/galleryCard";
 import TrendingProducts from "@/components/trendingProducts/trendingProducts";
+import BannerCard from "@/components/bannerCard/bannerCard";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -137,6 +138,27 @@ export default function HomePage() {
         <TrendingProducts />
       </div>
       {/* Trending products section */}
+
+      {/* Banner section */}
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <BannerCard
+              img={"/images/banner-4.jpeg"}
+              title={"Harmony Hours"}
+              content={"Swift Seconds, Bold Style, Timeless Sophistication."}
+            />
+          </div>
+          <div>
+            <BannerCard
+              img={"/images/banner-5.webp"}
+              title={"Silent Glam"}
+              content={"Chic Moments, Timeless Elegance, Your Timepiece Journey."}
+            />
+          </div>
+        </div>
+      </Container>
+      {/* Banner section */}
     </main>
   );
 };
