@@ -4,6 +4,7 @@ import MainSlider from "@/components/mainSlider/mainSlider";
 import GalleryCard from "@/components/galleryCard/galleryCard";
 import TrendingProducts from "@/components/trendingProducts/trendingProducts";
 import BannerCard from "@/components/bannerCard/bannerCard";
+import LimitedProducts from "@/components/limitedProducts/limitedProducts";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -159,6 +160,17 @@ export default function HomePage() {
         </div>
       </Container>
       {/* Banner section */}
+
+      {/* 360° Collection section */}
+      <div className="pb-10 pt-16">
+        <Container>
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">360° Collection</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">LIMITED EDITION</h3>
+        </Container>
+        <LimitedProducts />
+      </div>
+      {/* 360° Collection section */}
+      
     </main>
   );
 };
