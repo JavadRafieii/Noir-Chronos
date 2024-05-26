@@ -16,7 +16,7 @@ function ProductsPage({ products }) {
         <>
             <h1 className="bg-golden font-Roboto-Bold text-4xl text-dark-gray text-center py-6">Products</h1>
             <Container>
-                <PaginatedItems itemsPerPage={8} products={products} />
+                <PaginatedItems itemsPerPage={6} products={products} />
             </Container>
         </>
     );

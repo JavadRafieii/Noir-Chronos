@@ -9,131 +9,151 @@
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 280000
-      }
+      },
+      "gender": "LUXURY",
+      "limited": true
     },
     {
       "id": 2,
       "name": "Silk Charm Watch",
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
-      "img":"SilkCharmWatch",
+      "img": "SilkCharmWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 490000,
         "off": 20
-      }
+      },
+      "gender": "WOMEN",
+      "limited": true
     },
     {
       "id": 3,
       "name": "Quantum Watch",
       "brand": "NOIR CHRONOS",
       "type": "MIXED DIAL",
-      "img":"QuantumWatch",
+      "img": "QuantumWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 450000,
         "off": 11
-      }
+      },
+      "gender": "LUXURY",
+      "limited": true
     },
     {
       "id": 4,
       "name": "Nexus Time Watch",
       "brand": "NOIR CHRONOS",
       "type": "CHRONOGRAPH",
-      "img":"NexusTimeWatch",
+      "img": "NexusTimeWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 240000
-      }
+      },
+      "gender": "LUXURY",
+      "limited": true
     },
     {
       "id": 5,
       "name": "Luna Time Watch",
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
-      "img":"LunaTimeWatch",
+      "img": "LunaTimeWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 159000
-      }
+      },
+      "gender": "MEN"
     },
     {
       "id": 6,
       "name": "Horizon Chrono Watch",
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
-      "img":"HorizonChronoWatch",
+      "img": "HorizonChronoWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 159000
-      }
+      },
+      "gender": "LUXURY",
+      "limited": true
     },
     {
       "id": 7,
       "name": "Eden Glow Watch",
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
-      "img":"EdenGlowWatch",
+      "img": "EdenGlowWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 159000
-      }
+      },
+      "gender": "WOMEN",
+      "limited": true
     },
     {
       "id": 8,
       "name": "Charm Gem Watch",
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
-      "img":"CharmGemWatch",
+      "img": "CharmGemWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 159000
-      }
+      },
+      "gender": "WOMEN",
+      "limited": true
     },
     {
       "id": 9,
       "name": "Bella Time Watch",
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
-      "img":"BellaTimeWatch",
+      "img": "BellaTimeWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 159000
-      }
+      },
+      "gender": "WOMEN",
+      "limited": true
     },
     {
       "id": 10,
       "name": "Titan Guard Watch",
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
-      "img":"TitanGuardWatch",
+      "img": "TitanGuardWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 299000,
         "off": 16
-      }
+      },
+      "gender": "MEN"
     },
     {
       "id": 11,
       "name": "Apex Time Watch",
       "brand": "NOIR CHRONOS",
       "type": "CHRONOGRAPH",
-      "img":"ApexTimeWatch",
+      "img": "ApexTimeWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 320000
-      }
+      },
+      "gender": "MEN"
     },
     {
       "id": 12,
       "name": "Forge Watch",
       "brand": "NOIR CHRONOS",
       "type": "ARABIC",
-      "img":"ForgeWatch",
+      "img": "ForgeWatch",
       "sizes": [4, 6, 8, 10],
       "costs": {
         "price": 220000
-      }
+      },
+      "gender": "MEN"
     }
   ]
 }

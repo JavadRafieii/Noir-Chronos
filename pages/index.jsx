@@ -26,7 +26,17 @@ const imageStyleElite = {
   borderRadius: "14% 14% 14% 0",
 }
 
-export default function HomePage() {
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:8000/Products');
+  const products = await res.json();
+  return {
+    props: {
+      products,
+    },
+  };
+};
+
+export default function HomePage({ products }) {
   return (
     <main>
       {/* Main slider */}
@@ -137,7 +147,7 @@ export default function HomePage() {
           <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Best Selling</h4>
           <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center my-5">TRENDING PRODUCTS</h3>
         </Container>
-        <TrendingProducts />
+        <TrendingProducts products={products}/>
       </div>
       {/* Trending products section */}
 
@@ -168,7 +178,7 @@ export default function HomePage() {
           <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">360° Collection</h4>
           <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">LIMITED EDITION</h3>
         </Container>
-        <LimitedProducts />
+        <LimitedProducts products={products} />
       </div>
       {/* 360° Collection section */}
 
