@@ -92,6 +92,7 @@ export default function HomePage({ products }) {
                   width={0}
                   height={0}
                   sizes='100vw'
+                  loading="lazy"
                   style={imageStyleSelling2}
                 />
               </div>
@@ -102,6 +103,7 @@ export default function HomePage({ products }) {
                   width={0}
                   height={0}
                   sizes='100vw'
+                  loading="lazy"
                   style={imageStyleSelling1}
                 />
               </div>
@@ -122,6 +124,7 @@ export default function HomePage({ products }) {
                 width={0}
                 height={0}
                 sizes='100vw'
+                loading="lazy"
                 style={imageStyleElite}
               />
             </figure>

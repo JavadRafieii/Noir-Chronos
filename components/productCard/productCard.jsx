@@ -24,6 +24,7 @@ function ProductCard({ product }) {
                     width={0}
                     height={0}
                     sizes='100vw'
+                    loading="lazy"
                     style={imageStyleProduct}
                 />
                 <figcaption>
