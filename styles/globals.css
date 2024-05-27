@@ -222,3 +222,7 @@ body {
 }
 
 /* Paginate style */
+
+.MuiPopover-root .MuiPaper-root .MuiList-root {
+    @apply bg-[#1b1b1b]
+}
