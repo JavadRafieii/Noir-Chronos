@@ -24,7 +24,7 @@ function LimitedProducts({ products }) {
                         </SwiperSlide>
                     );
                 };
-                return null
+                return null;
             })}
         </Swiper>
     );

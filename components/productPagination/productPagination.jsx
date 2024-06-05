@@ -97,8 +97,6 @@ function PaginatedItems({ itemsPerPage, products }) {
         setFilter(false);
     };
 
-    console.log(currentItems);
-
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 my-10">
