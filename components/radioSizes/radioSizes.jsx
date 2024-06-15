@@ -24,15 +24,14 @@ const StyledFormControl = styled(FormControl)(({ theme }) => ({
     },
 }));
 
-function RadioSizes({ sizes }) {
+function RadioSizes({ handelChangeSize, sizes, size }) {
     return ( 
         <StyledFormControl>
             <FormLabel id="demo-row-radio-buttons-group-label">Size</FormLabel>
             <RadioGroup
                 row
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
-                value={4}
+                onChange={(event) => handelChangeSize(event.target.value)}
+                value={size}
             >
                 {sizes.map(item => <FormControlLabel key={item} value={item} control={<Radio />} label={item} />)}
             </RadioGroup>

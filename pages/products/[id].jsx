@@ -1,7 +1,8 @@
 import Container from "@/theme/container";
 import { formatPriceWithComma, calculateDiscountedPrice } from "@/features/features";
-import RadioSizes from "@/components/radioSizes/radioSizes";
-import NumberInput from "@/components/numberInput/numberInput";
+// import RadioSizes from "@/components/radioSizes/radioSizes";
+// import NumberInput from "@/components/numberInput/numberInput";
+import SizeAndNumber from "@/components/size-number/sizeAndNumber";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import GalleryZoom from "@/components/galleryZoom/galleryZoom";
 import Accordions from "@/components/accordion/accordion";
@@ -66,9 +67,8 @@ function SingleProductPage({ product, products }) {
                                     <span className="font-Roboto-Medium text-white text-lg">${formatPriceWithComma(price)}</span>}
                                 {off && <span className="font-Roboto-Medium text-white text-lg">${calculateDiscountedPrice(price, off)}</span>}
                             </div>
-                            <RadioSizes sizes={sizes} />
-                            <NumberInput />
-                            <button className="w-full bg-golden py-3 px-6 rounded-md font-Roboto-Medium text-base text-dark-gray duration-[.5s] hover:bg-white">Add to cart</button>
+                            <SizeAndNumber sizes={sizes} />
+                           
                             <span className="font-Roboto-Light text-light-gray text-base flex items-center gap-x-1 mt-5 cursor-pointer">
                                 <FavoriteBorderIcon />
                                 Add to wishlist

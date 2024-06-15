@@ -2,32 +2,10 @@ import { Unstable_NumberInput as BaseNumberInput } from '@mui/base/Unstable_Numb
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { styled } from '@mui/material/styles';
-
-function NumberInput() {
-    return (
-        <BaseNumberInput
-            value={1}
-            slots={{
-                root: StyledInputRoot,
-                input: StyledInput,
-                incrementButton: StyledButton,
-                decrementButton: StyledButton,
-            }}
-            slotProps={{
-                incrementButton: {
-                    children: <AddIcon fontSize="small" />,
-                    className: 'increment',
-                },
-                decrementButton: {
-                    children: <RemoveIcon fontSize="small" />,
-                },
-            }}
-        />
-    );
-};
+import { forwardRef } from 'react';
 
 const StyledInputRoot = styled('div')(
-    ({ theme }) => `
+  ({ theme }) => `
     margin: 1.25rem 0;
     width: fit-content;
     display: flex;
@@ -36,7 +14,7 @@ const StyledInputRoot = styled('div')(
 );
 
 const StyledInput = styled('input')(
-    ({ theme }) => `
+  ({ theme }) => `
     font-family: 'Roboto-Medium';
     background: transparent;
     border: 1px solid #ffffffbf;
@@ -64,7 +42,7 @@ const StyledInput = styled('input')(
 );
 
 const StyledButton = styled('button')(
-    ({ theme }) => `
+  ({ theme }) => `
     line-height: 1.5;
     border: 1px solid;
     border-radius: 100%;
@@ -94,4 +72,55 @@ const StyledButton = styled('button')(
 `,
 );
 
-export default NumberInput
+const NumberInput = forwardRef(({ handelChangeNumber, number }, ref) => {
+  return (
+    <BaseNumberInput
+      ref={ref}
+      onChange={handelChangeNumber}
+      value={Number(number)}
+      min={1} 
+      max={99}
+      slots={{
+        root: StyledInputRoot,
+        input: StyledInput,
+        incrementButton: StyledButton,
+        decrementButton: StyledButton,
+      }}
+      slotProps={{
+        incrementButton: {
+          children: <AddIcon fontSize="small" />,
+          className: 'increment',
+        },
+        decrementButton: {
+          children: <RemoveIcon fontSize="small" />,
+        },
+      }}
+    />
+  );
+});
+
+// function NumberInput({ handelChangeNumber, number }) {
+//   return (
+//     <BaseNumberInput
+//       onChange={handelChangeNumber}
+//       value={number}
+//       slots={{
+//         root: StyledInputRoot,
+//         input: StyledInput,
+//         incrementButton: StyledButton,
+//         decrementButton: StyledButton,
+//       }}
+//       slotProps={{
+//         incrementButton: {
+//           children: <AddIcon fontSize="small" />,
+//           className: 'increment',
+//         },
+//         decrementButton: {
+//           children: <RemoveIcon fontSize="small" />,
+//         },
+//       }}
+//     />
+//   );
+// };
+
+export default NumberInput;
