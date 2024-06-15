@@ -27,8 +27,7 @@ function MainSlider() {
                     <Image
                         src="/images/slide-1.webp"
                         alt="..."
-                        loading="lazy"
-                        quality={80}
+                        priority
                         width={0}
                         height={0}
                         sizes='100vw'
@@ -48,8 +47,7 @@ function MainSlider() {
                     <Image
                         src="/images/slide-2.webp"
                         alt="..."
-                        loading="lazy"
-                        quality={80}
+                        priority
                         width={0}
                         height={0}
                         sizes='100vw'
