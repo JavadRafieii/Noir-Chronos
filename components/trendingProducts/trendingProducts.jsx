@@ -28,12 +28,15 @@ const StyledTabList = styled(TabList)(({ theme }) => ({
     },
 }));
 
-function TrendingProducts() {
+
+function TrendingProducts({ products }) {
+
     const [value, setValue] = useState('1');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
     return (
         <TabContext value={value}>
             <StyledTabList onChange={handleChange} aria-label="lab API tabs example">
@@ -52,26 +55,18 @@ function TrendingProducts() {
                         1024: {
                             slidesPerView: 3.5,
                         },
-                        1280: {
-                            slidesPerView: 4.5,
-                        }
                     }}
                 >
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
+                    {products.map(item => {
+                        if (item.gender === "MEN") {
+                            return (
+                                <SwiperSlide key={item.id}>
+                                    <ProductCard product={item} />
+                                </SwiperSlide>
+                            );
+                        };
+                        return null
+                    })}
                 </Swiper>
             </TabPanel>
             <TabPanel value="2" sx={{ px: 0 }}>
@@ -85,26 +80,18 @@ function TrendingProducts() {
                         1024: {
                             slidesPerView: 3.5,
                         },
-                        1280: {
-                            slidesPerView: 4.5,
-                        }
                     }}
                 >
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
+                    {products.map(item => {
+                        if (item.gender === "WOMEN") {
+                            return (
+                                <SwiperSlide key={item.id}>
+                                    <ProductCard product={item} />
+                                </SwiperSlide>
+                            );
+                        };
+                        return null
+                    })}
                 </Swiper>
             </TabPanel>
             <TabPanel value="3" sx={{ px: 0 }}>
@@ -118,26 +105,18 @@ function TrendingProducts() {
                         1024: {
                             slidesPerView: 3.5,
                         },
-                        1280: {
-                            slidesPerView: 4.5,
-                        }
                     }}
                 >
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <ProductCard />
-                    </SwiperSlide>
+                    {products.map(item => {
+                        if (item.gender === "LUXURY") {
+                            return (
+                                <SwiperSlide key={item.id}>
+                                    <ProductCard product={item} />
+                                </SwiperSlide>
+                            );
+                        };
+                        return null
+                    })}
                 </Swiper>
             </TabPanel>
         </TabContext>

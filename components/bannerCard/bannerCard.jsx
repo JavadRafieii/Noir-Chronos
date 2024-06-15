@@ -8,7 +8,6 @@ function BannerCard({ img, title, content, link }) {
                     src={img}
                     alt="..."
                     loading="lazy"
-                    quality={80}
                     width={0}
                     height={0}
                     sizes='100vw'

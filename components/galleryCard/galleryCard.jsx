@@ -7,8 +7,7 @@ function GalleryCard({ img, title, subTitle, content, link }) {
                 <Image
                     src={img}
                     alt="..."
-                    loading="lazy"
-                    quality={80}
+                    priority
                     width={0}
                     height={0}
                     sizes='100vw'
