@@ -70,10 +70,135 @@
     font-family: "Sacramento-Regular";
     src: url(../public/fonts/Sacramento/Sacramento-Regular.ttf);
 }
+
 /* Added Sacramento Font */
 
 /* Added bacground color to body */
 body {
     @apply bg-dark-gray
 }
+
 /* Added bacground color to body */
+
+/* Main slider style */
+.mainSlider .swiper-slide h4 {
+    opacity: 0;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.mainSlider .swiper-slide h1 {
+    opacity: 0;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.mainSlider .swiper-slide button {
+    opacity: 0;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.mainSlider .swiper-slide-active h4 {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transition-delay: .5s;
+}
+
+.mainSlider .swiper-slide-active h1 {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transition-delay: .5s;
+}
+
+.mainSlider .swiper-slide-active button {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transition-delay: 1.2s;
+}
+
+.mainSlider .swiper-button-next,
+.mainSlider .swiper-button-prev {
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    display: none;
+}
+
+.mainSlider .swiper-button-next::after,
+.mainSlider .swiper-button-prev::after {
+    font-size: 1rem;
+}
+
+.mainSlider .swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+.mainSlider:hover .swiper-button-next,
+.mainSlider:hover .swiper-button-prev {
+    opacity: 1;
+}
+
+@media (min-width: 1280px) {
+
+    .mainSlider .swiper-button-next,
+    .mainSlider .swiper-button-prev {
+        display: flex;
+    }
+}
+
+/* Main slider style */
+
+.sale-line {
+    @apply relative before:content-[""] before:block before:absolute before:left-0 before:top-2 before:w-full before:h-[1px] before:bg-light-gray
+}
