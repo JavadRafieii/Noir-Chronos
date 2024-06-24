@@ -237,3 +237,19 @@ input[type=number]::-webkit-outer-spin-button {
 ._30i9K img {
     @apply w-full
 }
+
+/* Sweetalert style */
+.swal2-title {
+    @apply font-Roboto-Light text-sm text-light-gray
+}
+
+.swal2-popup {
+    background: #1b1b1b !important;
+    border: 1px solid #bb9d7b !important;
+}
+
+.swal2-timer-progress-bar {
+    background: #bb9d7b !important;
+}
+
+/* Sweetalert style */

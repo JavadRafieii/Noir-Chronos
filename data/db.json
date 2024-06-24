@@ -6,7 +6,12 @@
       "brand": "NOIR CHRONOS",
       "type": "CHRONOGRAPH",
       "img": "VoyagerTimeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 280000
       },
@@ -19,7 +24,12 @@
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
       "img": "SilkCharmWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 490000,
         "off": 20
@@ -33,7 +43,12 @@
       "brand": "NOIR CHRONOS",
       "type": "MIXED DIAL",
       "img": "QuantumWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 450000,
         "off": 11
@@ -47,7 +62,12 @@
       "brand": "NOIR CHRONOS",
       "type": "CHRONOGRAPH",
       "img": "NexusTimeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 240000
       },
@@ -60,7 +80,12 @@
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
       "img": "LunaTimeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 159000
       },
@@ -72,7 +97,12 @@
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
       "img": "HorizonChronoWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 159000
       },
@@ -85,7 +115,12 @@
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
       "img": "EdenGlowWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 159000
       },
@@ -98,7 +133,12 @@
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
       "img": "CharmGemWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 159000
       },
@@ -111,7 +151,12 @@
       "brand": "NOIR CHRONOS",
       "type": "FLIEGER",
       "img": "BellaTimeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 159000
       },
@@ -124,7 +169,12 @@
       "brand": "NOIR CHRONOS",
       "type": "ROMAN",
       "img": "TitanGuardWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 299000,
         "off": 16
@@ -137,7 +187,12 @@
       "brand": "NOIR CHRONOS",
       "type": "CHRONOGRAPH",
       "img": "ApexTimeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 320000
       },
@@ -149,11 +204,17 @@
       "brand": "NOIR CHRONOS",
       "type": "ARABIC",
       "img": "ForgeWatch",
-      "sizes": [4, 6, 8, 10],
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
       "costs": {
         "price": 220000
       },
       "gender": "MEN"
     }
-  ]
+  ],
+  "cart": []
 }

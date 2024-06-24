@@ -5,6 +5,8 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { styled } from '@mui/material/styles';
+import { useSelector } from "react-redux";
+import Link from "next/link";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     color: "#ffffffbf",
@@ -18,6 +20,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 function Header() {
+
+    const numberOfProducts = useSelector(state => Object.keys(state.cart.entities).length );
+
     return (
         <nav className="bg-dark-gray border-b-[1px] border-[#ffffff14] py-4 lg:py-6">
             <Container>
@@ -40,12 +45,14 @@ function Header() {
                     <div className="col-span-4 lg:col-span-2 order-3">
                         <div className="flex items-center gap-x-3 justify-end">
                             <SearchOutlinedIcon sx={{ color: "#ffffffbf", fontSize: 25 }} />
-                            <StyledBadge badgeContent={1}>
+                            <StyledBadge badgeContent={0}>
                                 <FavoriteBorderOutlinedIcon />
                             </StyledBadge>
-                            <StyledBadge badgeContent={1}>
-                                <ShoppingCartOutlinedIcon />
-                            </StyledBadge>
+                            <Link href={'/cart'}>
+                                <StyledBadge badgeContent={numberOfProducts}>
+                                    <ShoppingCartOutlinedIcon />
+                                </StyledBadge>
+                            </Link>
                         </div>
                     </div>
                 </div>

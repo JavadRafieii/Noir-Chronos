@@ -1,18 +1,27 @@
 import RadioSizes from "../radioSizes/radioSizes";
 import NumberInput from "../numberInput/numberInput";
-import { useState, useRef, createContext } from "react";
+import { useState, useRef } from "react";
+import { addNewProduct } from "@/reduxConfiguration/basketSlice";
+import { useDispatch, useSelector } from "react-redux";
+import CircularProgress from '@mui/material/CircularProgress';
 
-function SizeAndNumber({ sizes }) {
+function SizeAndNumber({ product }) {
+
+    const { id, name, brand, type, img, sizes, costs: { price, off } } = product;
+
+    const status = useSelector(state => state.cart.productAdditionStatus);
+
+    const dispatch = useDispatch();
 
     const ref = useRef(null);
 
     const [values, setValues] = useState({
         size: 4,
-        number: 1,
+        quantity: 1,
     });
 
-    const handelProductToBasket = () => {
-        console.log("size: " + values.size + " number: " + values.number);
+    const handelAddedNewProduct = () => {
+        dispatch(addNewProduct({ ...product, ...values }));
     };
 
     const handelChangeSize = (size) => {
@@ -23,10 +32,10 @@ function SizeAndNumber({ sizes }) {
     };
 
     const handelChangeNumber = () => {
-        let number = ref.current.lastChild.value;
+        let quantity = ref.current.lastChild.value;
         setValues(prevState => ({
             ...prevState,
-            number
+            quantity
         }));
     };
 
@@ -40,9 +49,14 @@ function SizeAndNumber({ sizes }) {
             <NumberInput
                 ref={ref}
                 handelChangeNumber={handelChangeNumber}
-                number={values.number}
+                productQuantity={values.quantity}
             />
-            <button onClick={handelProductToBasket} className="w-full bg-golden py-3 px-6 rounded-md font-Roboto-Medium text-base text-dark-gray duration-[.5s] hover:bg-white">Add to cart</button>
+            {status === "loading" ?
+                <button className="w-full bg-golden py-3 px-6 rounded-md">
+                    <CircularProgress sx={{ color: "#171717" }} size={"1.1rem"} />
+                </button> :
+                <button onClick={handelAddedNewProduct} className="w-full bg-golden py-3 px-6 rounded-md font-Roboto-Medium text-base text-dark-gray duration-[.5s] hover:bg-white">Add to cart</button>
+            }
         </div>
     );
 };

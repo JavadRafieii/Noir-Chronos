@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 
 const StyledInputRoot = styled('div')(
   ({ theme }) => `
-    margin: 1.25rem 0;
+    margin: auto;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -72,13 +72,13 @@ const StyledButton = styled('button')(
 `,
 );
 
-const NumberInput = forwardRef(({ handelChangeNumber, productQuantity }, ref) => {
+const NumberInputCart = forwardRef(({ handelChangeNumber, productQuantity }, ref) => {
   return (
     <BaseNumberInput
       ref={ref}
       onChange={handelChangeNumber}
       value={Number(productQuantity)}
-      min={1} 
+      min={1}
       max={99}
       slots={{
         root: StyledInputRoot,
@@ -99,4 +99,4 @@ const NumberInput = forwardRef(({ handelChangeNumber, productQuantity }, ref) =>
   );
 });
 
-export default NumberInput;
+export default NumberInputCart;

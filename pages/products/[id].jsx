@@ -1,13 +1,14 @@
 import Container from "@/theme/container";
 import { formatPriceWithComma, calculateDiscountedPrice } from "@/features/features";
-// import RadioSizes from "@/components/radioSizes/radioSizes";
-// import NumberInput from "@/components/numberInput/numberInput";
 import SizeAndNumber from "@/components/size-number/sizeAndNumber";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import GalleryZoom from "@/components/galleryZoom/galleryZoom";
 import Accordions from "@/components/accordion/accordion";
 import ProductTab from "@/components/tab/tab";
 import OtherProducts from "@/components/otherProducts/otherProducts";
+import Swal from 'sweetalert2';
+import { useSelector, useDispatch } from "react-redux";
+import { defaultStateOfProductAddition } from "@/reduxConfiguration/basketSlice";
 
 export async function getStaticProps({ params }) {
 
@@ -46,6 +47,38 @@ function SingleProductPage({ product, products }) {
 
     const { id, name, brand, type, img, sizes, costs: { price, off } } = product;
 
+    const dispatch = useDispatch();
+
+    const status = useSelector(state => state.cart.productAdditionStatus);
+
+    if (status === "added") {
+        dispatch(defaultStateOfProductAddition());
+    }
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+
+    if (status === "added") {
+        Toast.fire({
+            icon: "success",
+            title: "The product added."
+        });
+    } else if (status === "rejected") {
+        Toast.fire({
+            icon: "warning",
+            title: "The product is available."
+        });
+    }
+
     return (
         <>
             <Container>
@@ -67,8 +100,7 @@ function SingleProductPage({ product, products }) {
                                     <span className="font-Roboto-Medium text-white text-lg">${formatPriceWithComma(price)}</span>}
                                 {off && <span className="font-Roboto-Medium text-white text-lg">${calculateDiscountedPrice(price, off)}</span>}
                             </div>
-                            <SizeAndNumber sizes={sizes} />
-                           
+                            <SizeAndNumber sizes={sizes} product={product} />
                             <span className="font-Roboto-Light text-light-gray text-base flex items-center gap-x-1 mt-5 cursor-pointer">
                                 <FavoriteBorderIcon />
                                 Add to wishlist
