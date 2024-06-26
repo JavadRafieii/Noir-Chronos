@@ -12,6 +12,7 @@ const initialState = cartAdapter.getInitialState({
     error: null,
 
     productAdditionStatus: 'idle',
+    quantityStatus: 'idle',
 });
 
 export const fetchCartProducts = createAsyncThunk(
@@ -64,7 +65,6 @@ export const updateProductQuantity = createAsyncThunk(
             })
         });
         const data = await response.json();
-        console.log(data);
         return data;
     }
 );
@@ -90,6 +90,7 @@ const cartSlice = createSlice({
                 state.status = 'failed';
                 state.error = action.error.message;
             })
+
             .addCase(addNewProduct.fulfilled, (state, action) => {
                 state.productAdditionStatus = 'idel';
                 cartAdapter.addOne(state, action.payload);
@@ -101,16 +102,25 @@ const cartSlice = createSlice({
             .addCase(addNewProduct.rejected, (state) => {
                 state.productAdditionStatus = 'rejected';
             })
+
             .addCase(deleteProduct.fulfilled, (state, action) => {
                 cartAdapter.removeOne(state, action.payload);
             })
+            
             .addCase(updateProductQuantity.fulfilled, (state, action) => {
                 const { id, quantity } = action.payload;
                 const existingProduct = state.entities[id];
                 if (existingProduct) {
                     existingProduct.quantity = quantity;
                 };
-            });
+                state.quantityStatus = "idel";
+            }) 
+            .addCase(updateProductQuantity.pending, (state) => {
+                state.quantityStatus = "loading";
+            })
+            .addCase(updateProductQuantity.rejected, (state) => {
+                state.quantityStatus = "error";
+            })
     },
 });
 

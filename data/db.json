@@ -216,5 +216,26 @@
       "gender": "MEN"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 1,
+      "name": "Voyager Time Watch",
+      "brand": "NOIR CHRONOS",
+      "type": "CHRONOGRAPH",
+      "img": "VoyagerTimeWatch",
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "costs": {
+        "price": 280000
+      },
+      "gender": "LUXURY",
+      "limited": true,
+      "size": 4,
+      "quantity": "1"
+    }
+  ]
 }

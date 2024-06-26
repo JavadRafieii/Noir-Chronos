@@ -12,7 +12,7 @@ function CartCard({ id }) {
 
     const product = useSelector((state) => selectProductById(state, id));
 
-    const { productId, name, brand, type, img, sizes, costs: { price, off }, size, quantity } = product;
+    const { name, brand, type, img, sizes, costs: { price, off }, size, quantity } = product;
 
     const ref = useRef(null);
 
@@ -42,7 +42,7 @@ function CartCard({ id }) {
                 </span>
                 <span className="font-Roboto-Medium text-light-gray text-base block">Size: {size}</span>
             </div>
-            <div className="col-span-8 sm:col-span-4 md:col-span-4 xl:col-span-3">
+            <div className="col-span-8 sm:col-span-4 md:col-span-4 xl:col-span-3 flex justify-center h-fit">
                 <NumberInputCart
                     ref={ref}
                     handelChangeNumber={handelChangeNumber}

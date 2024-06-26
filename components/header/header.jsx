@@ -32,8 +32,12 @@ function Header() {
                     </div>
                     <div className="col-span-4 lg:col-span-8 order-1 lg:order-2">
                         <ul className="hidden lg:flex items-center justify-center gap-x-10 font-Roboto-Regular text-base text-light-gray">
-                            <li className="duration-[.5s] hover:text-white">HOME</li>
-                            <li className="duration-[.5s] hover:text-white">SHOP</li>
+                            <li className="duration-[.5s] hover:text-white">
+                                <Link href={"/"}>HOME</Link>
+                            </li>
+                            <li className="duration-[.5s] hover:text-white">
+                                <Link href={"/products"}>SHOP</Link>
+                            </li>
                             <li className="duration-[.5s] hover:text-white">ABOUT US</li>
                             <li className="duration-[.5s] hover:text-white">CONTACT US</li>
                             <li className="duration-[.5s] hover:text-white">TRACK YOUR ORDER</li>
