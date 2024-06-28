@@ -218,6 +218,27 @@
   ],
   "cart": [
     {
+      "id": 3,
+      "name": "Quantum Watch",
+      "brand": "NOIR CHRONOS",
+      "type": "MIXED DIAL",
+      "img": "QuantumWatch",
+      "sizes": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "costs": {
+        "price": 450000,
+        "off": 11
+      },
+      "gender": "LUXURY",
+      "limited": true,
+      "size": "10",
+      "quantity": "3"
+    },
+    {
       "id": 1,
       "name": "Voyager Time Watch",
       "brand": "NOIR CHRONOS",
@@ -235,7 +256,7 @@
       "gender": "LUXURY",
       "limited": true,
       "size": 4,
-      "quantity": "1"
+      "quantity": 1
     }
   ]
 }

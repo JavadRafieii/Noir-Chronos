@@ -28,7 +28,11 @@ module.exports = {
         "light-gray": "#ffffffbf",
         "golden": "#bb9d7b",
         "shellfish": "#ffffff0d",
+        "gray": "#f5f5f5",
       },
+      backgroundImage: {
+        'gradient-gray': "linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(245,245,245,1) 50%);",
+      }
     },
   },
   plugins: [],

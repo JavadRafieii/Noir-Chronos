@@ -78,6 +78,26 @@ body {
     @apply bg-dark-gray
 }
 
+body.checkout-page {
+    @apply bg-white lg:bg-gradient-gray
+}
+
+body.checkout-page footer {
+    display: none;
+}
+
+body.checkout-page .default-nav {
+    display: none;
+}
+
+.checkout-nav {
+    display: none;
+}
+
+body.checkout-page .checkout-nav {
+    display: block;
+}
+
 /* Added bacground color to body */
 
 /* Main slider style */
@@ -223,9 +243,9 @@ body {
 
 /* Paginate style */
 
-.MuiPopover-root .MuiPaper-root .MuiList-root {
+/* .MuiPopover-root .MuiPaper-root .MuiList-root {
     @apply bg-[#1b1b1b]
-}
+} */
 
 
 input[type=number]::-webkit-inner-spin-button,
