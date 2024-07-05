@@ -1,7 +1,4 @@
 import Image from "next/image";
-import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { calculateDiscountedPrice, formatPriceWithComma } from "@/features/features";
 import Link from "next/link";
 
@@ -43,20 +40,6 @@ function ProductCard({ product }) {
                 </figcaption>
             </figure>
             </Link>
-            <div className="px-5 w-full absolute left-0 bottom-24 opacity-0 duration-[.5s] group-hover:bottom-28 group-hover:opacity-100">
-                <div className="w-full h-10 flex items-center gap-x-[2px]">
-                    <div className="bg-white h-full p-2 flex items-center justify-center rounded-l-md">
-                        <RemoveRedEyeOutlinedIcon sx={{ fontSize: 20 }} />
-                    </div>
-                    <div className="bg-golden h-full w-full flex items-center justify-center gap-2">
-                        <ShoppingBasketOutlinedIcon sx={{ fontSize: 20 }} />
-                        <span className="font-Roboto-light text-base text-dark-gray">Add to cart</span>
-                    </div>
-                    <div className="bg-white h-full p-2 flex items-center justify-center rounded-r-md">
-                        <FavoriteBorderOutlinedIcon sx={{ fontSize: 20 }} />
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };

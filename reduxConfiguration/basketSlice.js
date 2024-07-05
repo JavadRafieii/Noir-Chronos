@@ -12,7 +12,7 @@ const initialState = cartAdapter.getInitialState({
     error: null,
 
     productAdditionStatus: 'idle',
-    quantityStatus: 'idle',
+    updateStatus: 'idle',
 });
 
 export const fetchCartProducts = createAsyncThunk(
@@ -76,6 +76,9 @@ const cartSlice = createSlice({
         defaultStateOfProductAddition(state) {
             state.productAdditionStatus = 'idel';
         },
+        defaultUpdateStatus(state) {
+            state.updateStatus = 'idel';
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -83,28 +86,35 @@ const cartSlice = createSlice({
                 state.status = 'loading';
             })
             .addCase(fetchCartProducts.fulfilled, (state, action) => {
-                state.status = 'succeeded';
+                state.status = 'idle';
                 cartAdapter.addMany(state, action.payload);
             })
-            .addCase(fetchCartProducts.rejected, (state, action) => {
-                state.status = 'failed';
-                state.error = action.error.message;
+            .addCase(fetchCartProducts.rejected, (state) => {
+                state.status = 'rejected';
             })
 
+            .addCase(addNewProduct.pending, (state) => {
+                state.productAdditionStatus = 'loading';
+            })
             .addCase(addNewProduct.fulfilled, (state, action) => {
                 state.productAdditionStatus = 'idel';
                 cartAdapter.addOne(state, action.payload);
                 state.productAdditionStatus = 'added';
             })
-            .addCase(addNewProduct.pending, (state) => {
-                state.productAdditionStatus = 'loading';
-            })
             .addCase(addNewProduct.rejected, (state) => {
                 state.productAdditionStatus = 'rejected';
             })
 
+
+            .addCase(deleteProduct.pending, (state) => {
+                state.updateStatus = "loading";
+            })
             .addCase(deleteProduct.fulfilled, (state, action) => {
+                state.updateStatus = "idel";
                 cartAdapter.removeOne(state, action.payload);
+            })
+            .addCase(deleteProduct.rejected, (state) => {
+                state.updateStatus = "error";
             })
             
             .addCase(updateProductQuantity.fulfilled, (state, action) => {
@@ -113,18 +123,18 @@ const cartSlice = createSlice({
                 if (existingProduct) {
                     existingProduct.quantity = quantity;
                 };
-                state.quantityStatus = "idel";
+                state.updateStatus = "idel";
             }) 
             .addCase(updateProductQuantity.pending, (state) => {
-                state.quantityStatus = "loading";
+                state.updateStatus = "loading";
             })
             .addCase(updateProductQuantity.rejected, (state) => {
-                state.quantityStatus = "error";
+                state.updateStatus = "error";
             })
     },
 });
 
-export const { defaultStateOfProductAddition } = cartSlice.actions;
+export const { defaultStateOfProductAddition, defaultUpdateStatus } = cartSlice.actions;
 
 export default cartSlice.reducer;
 

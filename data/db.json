@@ -16,7 +16,8 @@
         "price": 280000
       },
       "gender": "LUXURY",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 2,
@@ -35,7 +36,8 @@
         "off": 20
       },
       "gender": "WOMEN",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 3,
@@ -54,7 +56,8 @@
         "off": 11
       },
       "gender": "LUXURY",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 4,
@@ -72,7 +75,8 @@
         "price": 240000
       },
       "gender": "LUXURY",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 5,
@@ -89,7 +93,8 @@
       "costs": {
         "price": 159000
       },
-      "gender": "MEN"
+      "gender": "MEN",
+      "favorite": false
     },
     {
       "id": 6,
@@ -107,7 +112,8 @@
         "price": 159000
       },
       "gender": "LUXURY",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 7,
@@ -125,7 +131,8 @@
         "price": 159000
       },
       "gender": "WOMEN",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 8,
@@ -143,7 +150,8 @@
         "price": 159000
       },
       "gender": "WOMEN",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 9,
@@ -161,7 +169,8 @@
         "price": 159000
       },
       "gender": "WOMEN",
-      "limited": true
+      "limited": true,
+      "favorite": false
     },
     {
       "id": 10,
@@ -179,7 +188,8 @@
         "price": 299000,
         "off": 16
       },
-      "gender": "MEN"
+      "gender": "MEN",
+      "favorite": false
     },
     {
       "id": 11,
@@ -196,7 +206,8 @@
       "costs": {
         "price": 320000
       },
-      "gender": "MEN"
+      "gender": "MEN",
+      "favorite": false
     },
     {
       "id": 12,
@@ -213,16 +224,17 @@
       "costs": {
         "price": 220000
       },
-      "gender": "MEN"
+      "gender": "MEN",
+      "favorite": false
     }
   ],
   "cart": [
     {
-      "id": 3,
-      "name": "Quantum Watch",
+      "id": 2,
+      "name": "Silk Charm Watch",
       "brand": "NOIR CHRONOS",
-      "type": "MIXED DIAL",
-      "img": "QuantumWatch",
+      "type": "FLIEGER",
+      "img": "SilkCharmWatch",
       "sizes": [
         4,
         6,
@@ -230,33 +242,15 @@
         10
       ],
       "costs": {
-        "price": 450000,
-        "off": 11
+        "price": 490000,
+        "off": 20
       },
-      "gender": "LUXURY",
+      "gender": "WOMEN",
       "limited": true,
-      "size": "10",
-      "quantity": "3"
-    },
-    {
-      "id": 1,
-      "name": "Voyager Time Watch",
-      "brand": "NOIR CHRONOS",
-      "type": "CHRONOGRAPH",
-      "img": "VoyagerTimeWatch",
-      "sizes": [
-        4,
-        6,
-        8,
-        10
-      ],
-      "costs": {
-        "price": 280000
-      },
-      "gender": "LUXURY",
-      "limited": true,
-      "size": 4,
-      "quantity": 1
+      "favorite": false,
+      "size": "6",
+      "quantity": "2"
     }
-  ]
+  ],
+  "wishlist": []
 }

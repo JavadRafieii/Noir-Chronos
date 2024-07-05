@@ -243,11 +243,6 @@ body.checkout-page .checkout-nav {
 
 /* Paginate style */
 
-/* .MuiPopover-root .MuiPaper-root .MuiList-root {
-    @apply bg-[#1b1b1b]
-} */
-
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;

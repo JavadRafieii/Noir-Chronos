@@ -1,7 +1,9 @@
-import reducer from "./basketSlice"
+import cart from "./basketSlice";
+import wishlist from "./wishlistSlice"
 
 const rootReducer = {
-    cart: reducer
+    cart,
+    wishlist,
 };
 
 export default rootReducer;

@@ -1,14 +1,15 @@
 import Container from "@/theme/container";
 import { formatPriceWithComma, calculateDiscountedPrice } from "@/features/features";
 import SizeAndNumber from "@/components/size-number/sizeAndNumber";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import GalleryZoom from "@/components/galleryZoom/galleryZoom";
 import Accordions from "@/components/accordion/accordion";
 import ProductTab from "@/components/tab/tab";
 import OtherProducts from "@/components/otherProducts/otherProducts";
 import Swal from 'sweetalert2';
+import FavoriteSection from "@/components/favoriteSection/favoriteSection";
 import { useSelector, useDispatch } from "react-redux";
 import { defaultStateOfProductAddition } from "@/reduxConfiguration/basketSlice";
+import CircularProgress from '@mui/material/CircularProgress';
 
 export async function getStaticProps({ params }) {
 
@@ -45,15 +46,18 @@ export async function getStaticPaths() {
 
 function SingleProductPage({ product, products }) {
 
-    const { id, name, brand, type, img, sizes, costs: { price, off } } = product;
+    const { id, name, brand, type, img, sizes, costs: { price, off }, favorite } = product;
 
     const dispatch = useDispatch();
 
     const status = useSelector(state => state.cart.productAdditionStatus);
+    const checked = useSelector(state => state.wishlist.entities[id]?.favorite || false);
+    const wishlisStatus = useSelector(state => state.wishlist.status);
+    const actionError = useSelector(state => state.wishlist.actionError);
 
-    if (status === "added") {
+    if (status === "added" || status === "rejected") {
         dispatch(defaultStateOfProductAddition());
-    }
+    };
 
     const Toast = Swal.mixin({
         toast: true,
@@ -77,7 +81,14 @@ function SingleProductPage({ product, products }) {
             icon: "warning",
             title: "The product is available."
         });
-    }
+    };
+
+    if (actionError) {
+        Toast.fire({
+            icon: "warning",
+            title: "Please try again"
+        });
+    };
 
     return (
         <>
@@ -102,8 +113,13 @@ function SingleProductPage({ product, products }) {
                             </div>
                             <SizeAndNumber sizes={sizes} product={product} />
                             <span className="font-Roboto-Light text-light-gray text-base flex items-center gap-x-1 mt-5 cursor-pointer">
-                                <FavoriteBorderIcon />
-                                Add to wishlist
+                                {wishlisStatus === "idle" ?
+                                    <FavoriteSection
+                                        checked={checked}
+                                        product={product}
+                                    /> :
+                                    <CircularProgress sx={{ color: "#fff" }} size={"1.1rem"} />
+                                }
                             </span>
                         </div>
                         <Accordions />

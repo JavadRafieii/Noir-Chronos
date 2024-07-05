@@ -38,7 +38,7 @@ function CartCard({ id }) {
             <div className="col-span-8 sm:col-span-4 md:col-span-4 xl:col-span-3">
                 <h4 className="font-Roboto-Bold text-white text-lg">{name}</h4>
                 <span className="font-Roboto-Medium text-light-gray text-base block my-2">
-                    {off ? calculateDiscountedPrice(price, off) + " $" : formatPriceWithComma(price) + " $"}
+                    {off ? "$" + calculateDiscountedPrice(price, off) : "$" + formatPriceWithComma(price)}
                 </span>
                 <span className="font-Roboto-Medium text-light-gray text-base block">Size: {size}</span>
             </div>
@@ -51,7 +51,7 @@ function CartCard({ id }) {
             </div>
             <div className="col-span-4 sm:col-span-6 md:col-span-2">
                 <span className="font-Roboto-Medium text-white text-base block text-right sm:text-left md:text-right">
-                    {off ? calculateFinalPrice(price, off, quantity) + " $" : formatPriceWithComma(price, quantity) + " $"}
+                    {off ? "$" + calculateFinalPrice(price, off, quantity) : "$" + formatPriceWithComma(price, quantity)}
                 </span>
             </div>
             <div className="col-span-12 sm:col-span-6 md:col-span-12 xl:col-span-2 flex justify-end">

@@ -40,6 +40,14 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
     }
 }));
 
+const menuProps = {
+    PaperProps: {
+        style: {
+            backgroundColor: '#1b1b1b',
+        },
+    },
+};
+
 function FilterProducts({ gender, handleChangeGender }) {
 
     return ( 
@@ -49,6 +57,7 @@ function FilterProducts({ gender, handleChangeGender }) {
                 value={gender}
                 label="Filter by"
                 onChange={handleChangeGender}
+                MenuProps={menuProps}
             >
                 <StyledMenuItem value={""}>FILTER BY</StyledMenuItem>
                 <StyledMenuItem value={"MEN"}>MEN LUXURY</StyledMenuItem>

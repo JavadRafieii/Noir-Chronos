@@ -1,14 +1,15 @@
 import Container from "@/theme/container";
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { styled } from '@mui/material/styles';
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import WishlistDrawer from "../wishlistDrawer/wishlistDrawer";
+import { selectWishlistIds } from "@/reduxConfiguration/wishlistSlice";
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadgeCart = styled(Badge)(({ theme }) => ({
     color: "#ffffffbf",
     '& .MuiBadge-badge': {
         backgroundColor: "#bb9d7b",
@@ -19,20 +20,26 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
 }));
 
-const StyledBadgeCheckout = styled(Badge)(({ theme }) => ({
-    color: "#bb9d7b",
+const StyledBadgeWishlist = styled(Badge)(({ theme }) => ({
+    color: "#ffffffbf",
     '& .MuiBadge-badge': {
         backgroundColor: "#bb9d7b",
         color: "#171717",
-        right: 4,
-        top: 20,
+        border: ".5px solid",
+        right: 2,
+        top: 22,
     },
+}));
+
+const StyledBadgeCheckout = styled(Badge)(({ theme }) => ({
+    color: "#bb9d7b",
 }));
 
 
 function Header() {
 
     const numberOfProducts = useSelector(state => Object.keys(state.cart.entities).length);
+    const favoriteNumber = useSelector(state => selectWishlistIds(state).length);
 
     return (
         <>
@@ -61,13 +68,13 @@ function Header() {
                         <div className="col-span-4 lg:col-span-2 order-3">
                             <div className="flex items-center gap-x-3 justify-end">
                                 <SearchOutlinedIcon sx={{ color: "#ffffffbf", fontSize: 25 }} />
-                                <StyledBadge badgeContent={0}>
-                                    <FavoriteBorderOutlinedIcon />
-                                </StyledBadge>
+                                <StyledBadgeWishlist badgeContent={favoriteNumber} sx={{cursor: "pointer"}}>
+                                    <WishlistDrawer />
+                                </StyledBadgeWishlist>
                                 <Link href={'/cart'}>
-                                    <StyledBadge badgeContent={numberOfProducts}>
+                                    <StyledBadgeCart badgeContent={numberOfProducts}>
                                         <ShoppingCartOutlinedIcon />
-                                    </StyledBadge>
+                                    </StyledBadgeCart>
                                 </Link>
                             </div>
                         </div>

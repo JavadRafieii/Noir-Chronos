@@ -4,6 +4,7 @@ import Footer from "@/components/footer/footer";
 import store from "@/reduxConfiguration/store";
 import { Provider } from "react-redux";
 import { fetchCartProducts } from "@/reduxConfiguration/basketSlice";
+import { fetchWishlist } from "@/reduxConfiguration/wishlistSlice";
 import { useEffect } from "react";
 import { useRouter } from 'next/router';
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
 
     store.dispatch(fetchCartProducts());
+    store.dispatch(fetchWishlist());
 
     const handleRouteChange = (url) => {
       if (url === '/checkout') {
