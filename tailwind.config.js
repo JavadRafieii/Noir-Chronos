@@ -32,6 +32,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-gray': "linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(245,245,245,1) 50%);",
+        'gradient-gold': "linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(187,157,123,1) 50%, rgba(52,47,41,1) 100%);",
       }
     },
   },
