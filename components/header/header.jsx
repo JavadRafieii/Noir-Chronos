@@ -57,8 +57,16 @@ function Header() {
                                 <li className="duration-[.5s] hover:text-white">
                                     <Link href={"/products"}>SHOP</Link>
                                 </li>
-                                <li className="duration-[.5s] hover:text-white">ABOUT US</li>
-                                <li className="duration-[.5s] hover:text-white">CONTACT US</li>
+                                <li className="duration-[.5s] hover:text-white">
+                                    <Link href={"/about-us"}>
+                                        ABOUT US
+                                    </Link>
+                                </li>
+                                <li className="duration-[.5s] hover:text-white">
+                                    <Link href={"/contact"}>
+                                        CONTACT US
+                                    </Link>
+                                </li>
                                 <li className="duration-[.5s] hover:text-white">TRACK YOUR ORDER</li>
                             </ul>
                             <span className="lg:hidden">
@@ -68,7 +76,7 @@ function Header() {
                         <div className="col-span-4 lg:col-span-2 order-3">
                             <div className="flex items-center gap-x-3 justify-end">
                                 <SearchOutlinedIcon sx={{ color: "#ffffffbf", fontSize: 25 }} />
-                                <StyledBadgeWishlist badgeContent={favoriteNumber} sx={{cursor: "pointer"}}>
+                                <StyledBadgeWishlist badgeContent={favoriteNumber} sx={{ cursor: "pointer" }}>
                                     <WishlistDrawer />
                                 </StyledBadgeWishlist>
                                 <Link href={'/cart'}>
