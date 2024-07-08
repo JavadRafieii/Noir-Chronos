@@ -4,8 +4,9 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import SmartDisplayOutlinedIcon from '@mui/icons-material/SmartDisplayOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
+import { TextField, IconButton, InputAdornment } from '@mui/material';
+import { Send as SendIcon } from '@mui/icons-material';
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
     background: "#171717",
@@ -42,7 +43,19 @@ function Footer() {
                     <h4 className="font-Roboto-Bold text-white text-3xl lg:text-4xl text-center">Subscribe to our emails</h4>
                     <p className="font-Roboto-Light text-light-gray text-base text-center my-5">Be the first to know about new collections and exclusive offers.</p>
                     <div className="flex justify-center">
-                        <StyledTextField id="outlined-basic" label="Outlined" variant="outlined" />
+                        <StyledTextField
+                            label="Email"
+                            variant="outlined"
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="end">
+                                        <IconButton>
+                                            <SendIcon sx={{ color: "#ffffffbf"}}/>
+                                        </IconButton>
+                                    </InputAdornment>
+                                ),
+                            }}
+                        />
                     </div>
                 </Container>
             </div>

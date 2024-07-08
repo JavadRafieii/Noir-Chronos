@@ -151,7 +151,7 @@ export default function HomePage({ products }) {
           <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Best Selling</h4>
           <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center my-5">TRENDING PRODUCTS</h3>
         </Container>
-        <TrendingProducts products={products}/>
+        <TrendingProducts products={products} />
       </div>
       {/* Trending products section */}
 
@@ -176,7 +176,9 @@ export default function HomePage({ products }) {
       </Container>
       {/* Banner section */}
 
+      {/* Text slider */}
       <TextSlider />
+      {/* Text slider */}
 
       {/* 360° Collection section */}
       <div className="pb-10 pt-16">
