@@ -6,6 +6,7 @@ import TrendingProducts from "@/components/trendingProducts/trendingProducts";
 import BannerCard from "@/components/bannerCard/bannerCard";
 import LimitedProducts from "@/components/limitedProducts/limitedProducts";
 import Blogs from "@/components/blogs/blogs";
+import TextSlider from "@/components/textSlider/textSlider";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -174,6 +175,8 @@ export default function HomePage({ products }) {
         </div>
       </Container>
       {/* Banner section */}
+
+      <TextSlider />
 
       {/* 360° Collection section */}
       <div className="pb-10 pt-16">
