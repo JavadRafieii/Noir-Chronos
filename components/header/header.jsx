@@ -76,11 +76,14 @@ function Header() {
                                         CONTACT US
                                     </Link>
                                 </li>
-                                <li className="duration-[.5s] hover:text-white">TRACK YOUR ORDER</li>
+                                <li className="duration-[.5s] hover:text-white">
+                                    <Link href={"/blog"} className={`${pathname === '/blog' ? 'active-link' : ''}`}>
+                                        BLOG
+                                    </Link>
+                                </li>
                             </ul>
                             <span className="lg:hidden">
                                 <MobileMenu />
-                                {/* <MenuOutlinedIcon sx={{ color: "#ffffffbf", fontSize: 25 }} /> */}
                             </span>
                         </div>
                         <div className="col-span-4 lg:col-span-2 order-3">

@@ -48,6 +48,11 @@ function MobileMenu() {
                         CONTACT US
                     </Link>
                 </li>
+                <li className={`duration-[.5s] hover:text-white py-3 px-5 hover:bg-[#202020] ${pathname === '/blog' ? 'active-mobile-link' : ''}`}>
+                    <Link href={"/blog"}>
+                        BLOG
+                    </Link>
+                </li>
             </ul>
             <ul className="flex items-center justify-center gap-5 bg-[#202020] py-5">
                 <li>

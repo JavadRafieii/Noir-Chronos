@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import BlogCard from '../blogCard/blogCard';
 
-function Blogs() {
-    return ( 
+function Blogs({ blogs }) {
+    return (
         <Swiper
             slidesPerView={1.2}
             spaceBetween={15}
@@ -16,17 +16,13 @@ function Blogs() {
                 },
             }}
         >
-            <SwiperSlide>
-                <BlogCard />
-            </SwiperSlide>
-            <SwiperSlide>
-                <BlogCard />
-            </SwiperSlide>
-            <SwiperSlide>
-                <BlogCard />
-            </SwiperSlide>
+            {blogs.map(item => (
+                <SwiperSlide key={item.id}>
+                    <BlogCard blog={item} />
+                </SwiperSlide>
+            ))}
         </Swiper>
-     );
+    );
 };
 
 export default Blogs;

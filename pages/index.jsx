@@ -28,16 +28,19 @@ const imageStyleElite = {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:8000/Products');
-  const products = await res.json();
+  const res1 = await fetch('http://localhost:8000/Products');
+  const products = await res1.json();
+  const res2 = await fetch('http://localhost:8000/blog');
+  const blogs = await res2.json();
   return {
     props: {
       products,
+      blogs,
     },
   };
 };
 
-export default function HomePage({ products }) {
+export default function HomePage({ products, blogs }) {
   return (
     <main>
       {/* Main slider */}
@@ -195,7 +198,7 @@ export default function HomePage({ products }) {
         <div className="py-10">
           <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Happenings Around</h4>
           <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">Blog posts</h3>
-          <Blogs />
+          <Blogs blogs={blogs} />
         </div>
       </Container>
       {/* Blog section */}
