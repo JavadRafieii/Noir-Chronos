@@ -16,12 +16,13 @@ function BlogCard({ blog }) {
             <div className="hover:border-[1px] hover:border-shellfish hover:bg-[#1b1b1b]">
                 <figure>
                     <Image
-                        src={`/images/${img}.webp`}
+                        src={`/images/${img}-min.png`}
                         alt="..."
                         width={0}
                         height={0}
                         sizes='100vw'
                         style={imageStyleBlog}
+                        priority
                     />
                 </figure>
                 <div className="p-2 mt-5">

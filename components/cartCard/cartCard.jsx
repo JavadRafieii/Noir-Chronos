@@ -32,7 +32,7 @@ function CartCard({ id }) {
         <li className="grid grid-cols-12 gap-4 mb-10 last-of-type:mb-0">
             <div className="col-span-4 md:col-span-2">
                 <figure className="border-[1px] border-[#ffffff14]">
-                    <img src={`/images/products/${img}.png`} alt="..." className="w-full" />
+                    <img src={`/images/products/${img}-min.png`} alt="..." className="w-full" />
                 </figure>
             </div>
             <div className="col-span-8 sm:col-span-4 md:col-span-4 xl:col-span-3">

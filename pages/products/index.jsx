@@ -2,7 +2,7 @@ import Container from "@/theme/container";
 import PaginatedItems from "@/components/productPagination/productPagination";
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:8000/Products');
+    const res = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/products');
     const products = await res.json();
     return {
         props: {

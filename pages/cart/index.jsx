@@ -93,7 +93,6 @@ function CartPage() {
                         </div>
             }
 
-
         </Container>
     );
 };

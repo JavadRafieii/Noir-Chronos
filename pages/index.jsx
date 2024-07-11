@@ -28,9 +28,9 @@ const imageStyleElite = {
 }
 
 export async function getStaticProps() {
-  const res1 = await fetch('http://localhost:8000/Products');
+  const res1 = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/products');
   const products = await res1.json();
-  const res2 = await fetch('http://localhost:8000/blog');
+  const res2 = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/blog');
   const blogs = await res2.json();
   return {
     props: {
@@ -51,7 +51,7 @@ export default function HomePage({ products, blogs }) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div>
           <GalleryCard
-            img={"/images/banner-1.webp"}
+            img={"/images/banner-1-min.png"}
             title={"Luxe Tock"}
             subTitle={"Women's Watches"}
             content={"Seconds Spark, Style Ignites."}
@@ -59,7 +59,7 @@ export default function HomePage({ products, blogs }) {
         </div>
         <div>
           <GalleryCard
-            img={"/images/banner-2.jpeg"}
+            img={"/images/banner-2-min.png"}
             title={"Bold Pulse"}
             subTitle={"Men's Watches"}
             content={"Precision Beyond Measure, Style That Lasts Always."}
@@ -67,7 +67,7 @@ export default function HomePage({ products, blogs }) {
         </div>
         <div>
           <GalleryCard
-            img={"/images/banner-3.webp"}
+            img={"/images/banner-3-min.png"}
             title={"Swift Chic"}
             subTitle={"Unisex Watchwes"}
             content={"Style in Motion, Grace in Every Second."}
@@ -91,7 +91,7 @@ export default function HomePage({ products, blogs }) {
             <figure className="relative">
               <div className="w-[60%] relative z-0 top-10">
                 <Image
-                  src={"/images/best-selling-2.webp"}
+                  src={"/images/best-selling-2-min.png"}
                   alt="..."
                   width={0}
                   height={0}
@@ -102,7 +102,7 @@ export default function HomePage({ products, blogs }) {
               </div>
               <div className="w-[60%] absolute right-0 top-0">
                 <Image
-                  src={"/images/best-selling-1.jpeg"}
+                  src={"/images/best-selling-1-min.png"}
                   alt="..."
                   width={0}
                   height={0}
@@ -123,7 +123,7 @@ export default function HomePage({ products, blogs }) {
           <div className="order-2 md:order-1">
             <figure>
               <Image
-                src={"/images/elite-elegance.webp"}
+                src={"/images/elite-elegance-min.png"}
                 alt="..."
                 width={0}
                 height={0}
@@ -163,14 +163,14 @@ export default function HomePage({ products, blogs }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <BannerCard
-              img={"/images/banner-4.jpeg"}
+              img={"/images/banner-4-min.png"}
               title={"Harmony Hours"}
               content={"Swift Seconds, Bold Style, Timeless Sophistication."}
             />
           </div>
           <div>
             <BannerCard
-              img={"/images/banner-5.webp"}
+              img={"/images/banner-5-min.png"}
               title={"Silent Glam"}
               content={"Chic Moments, Timeless Elegance, Your Timepiece Journey."}
             />

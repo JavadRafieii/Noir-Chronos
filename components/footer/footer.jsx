@@ -38,7 +38,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 function Footer() {
     return (
         <footer>
-            <div className="bg-[url('/images/banner-4.jpeg')] bg-cover bg-center py-20">
+            <div className="bg-[url('/images/banner-4-min.png')] bg-cover bg-center py-20">
                 <Container>
                     <h4 className="font-Roboto-Bold text-white text-3xl lg:text-4xl text-center">Subscribe to our emails</h4>
                     <p className="font-Roboto-Light text-light-gray text-base text-center my-5">Be the first to know about new collections and exclusive offers.</p>

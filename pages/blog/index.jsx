@@ -19,7 +19,7 @@ function BlogPage({ blogs }) {
 export default BlogPage;
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:8000/blog');
+    const res = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/blog');
     const blogs = await res.json();
     return {
         props: {

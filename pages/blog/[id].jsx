@@ -17,12 +17,13 @@ function SingleBlogPage({ blog }) {
     return (
         <Container>
             <Image
-                src={`/images/${img}.webp`}
-                alt="..."
+                src={`/images/${img}-min.png`}
+                alt={title}
                 width={0}
                 height={0}
                 sizes='100vw'
                 style={imageStyleBlog}
+                priority
             />
             <div className="mx-auto lg:w-2/3 my-10">
                 <h1 className="font-Roboto-Bold text-white text-2xl sm:text-3xl md:text-4xl mb-2">{title}</h1>
@@ -51,7 +52,7 @@ export async function getStaticProps({ params }) {
 
     const { id } = params;
 
-    const res = await fetch(`http://localhost:8000/blog/${id}`);
+    const res = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/blog/${id}`);
     const blog = await res.json();
 
     return {
@@ -63,7 +64,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 
-    const res = await fetch('http://localhost:8000/blog');
+    const res = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/blog');
     const blogs = await res.json();
 
     const paths = blogs.map(item => (

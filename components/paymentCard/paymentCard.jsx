@@ -21,7 +21,7 @@ function PaymentCard({id}) {
         <li className="grid grid-cols-12 gap-5 mb-5 last-of-type:mb-0">
             <div className="col-span-3 md:col-span-2 border border-[#c4c4c4] rounded-md">
                 <StyledBadge badgeContent={quantity}>
-                    <img src={`/images/products/${img}.png`} alt="..." />
+                    <img src={`/images/products/${img}-min.png`} alt="..." />
                 </StyledBadge>
             </div>
             <div className="col-span-6 md:col-span-5 flex items-center">

@@ -15,9 +15,9 @@ export async function getStaticProps({ params }) {
 
     const { id } = params;
 
-    const res1 = await fetch(`http://localhost:8000/Products/${id}`);
+    const res1 = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/products/${id}`);
     const product = await res1.json();
-    const res2 = await fetch("http://localhost:8000/Products");
+    const res2 = await fetch("https://my-json-server.typicode.com/JavadRafieii/database/products");
     const products = await res2.json();
 
     return {
@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 
-    const res = await fetch('http://localhost:8000/Products');
+    const res = await fetch('https://my-json-server.typicode.com/JavadRafieii/database/products');
     const products = await res.json();
 
     const paths = products.map(item => (
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
         }
     ));
 
-    return { paths, fallback: true };
+    return { paths, fallback: false };
 };
 
 function SingleProductPage({ product, products }) {

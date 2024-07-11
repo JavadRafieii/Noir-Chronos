@@ -29,7 +29,7 @@ function AboutUsPage() {
         <>
             <figure className="relative">
                 <Image
-                    src="/images/slide-2.webp"
+                    src="/images/slide-2-min.png"
                     alt="..."
                     priority
                     width={0}
@@ -67,7 +67,7 @@ function AboutUsPage() {
                         <figure className="relative">
                             <div className="w-[60%] relative z-0 top-10">
                                 <Image
-                                    src={"/images/banner-2.jpeg"}
+                                    src={"/images/banner-2-min.png"}
                                     alt="..."
                                     width={0}
                                     height={0}
@@ -78,7 +78,7 @@ function AboutUsPage() {
                             </div>
                             <div className="w-[60%] absolute right-0 top-0">
                                 <Image
-                                    src={"/images/elite-elegance.webp"}
+                                    src={"/images/elite-elegance-min.png"}
                                     alt="..."
                                     width={0}
                                     height={0}

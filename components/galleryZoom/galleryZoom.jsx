@@ -5,7 +5,7 @@ function GalleryZoom({ img, alt }) {
 
 const image = [
     {
-        src: `/images/products/${img}.png`,
+        src: `/images/products/${img}-min.png`,
         alt: alt
     }
 ];

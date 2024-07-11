@@ -17,7 +17,7 @@ const initialState = wishlistAdapter.getInitialState({
 export const fetchWishlist = createAsyncThunk(
     'wishlist/fetchWishlist',
     async () => {
-        const response = await fetch("http://localhost:8000/wishlist");
+        const response = await fetch("https://my-json-server.typicode.com/JavadRafieii/database/wishlist");
         const data = await response.json();
         return data;
     }
@@ -27,7 +27,7 @@ export const addNewFavorite = createAsyncThunk(
     'wishlist/addNewFavorite',
     async (newFavorite) => {
         const { id } = newFavorite;
-        const updateProduct = await fetch(`http://localhost:8000/Products/${id}`, {
+        const updateProduct = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/products/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ export const addNewFavorite = createAsyncThunk(
         });
         const dataUpdate = await updateProduct.json();
 
-        const response = await fetch("http://localhost:8000/wishlist", {
+        const response = await fetch("https://my-json-server.typicode.com/JavadRafieii/database/wishlist", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ export const addNewFavorite = createAsyncThunk(
 export const deleteFavorite = createAsyncThunk(
     'wishlist/deleteFavorite',
     async (id) => {
-        const updateProduct = await fetch(`http://localhost:8000/Products/${id}`, {
+        const updateProduct = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/products/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ export const deleteFavorite = createAsyncThunk(
                 favorite: false,
             })
         });
-        const response = await fetch(`http://localhost:8000/wishlist/${id}`, {
+        const response = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/wishlist/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

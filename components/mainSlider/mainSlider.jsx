@@ -25,7 +25,7 @@ function MainSlider() {
             <SwiperSlide>
                 <figure className="relative">
                     <Image
-                        src="/images/slide-1.webp"
+                        src="/images/slide-1-min.png"
                         alt="..."
                         priority
                         width={0}
@@ -45,7 +45,7 @@ function MainSlider() {
             <SwiperSlide>
                 <figure>
                     <Image
-                        src="/images/slide-2.webp"
+                        src="/images/slide-2-min.png"
                         alt="..."
                         priority
                         width={0}

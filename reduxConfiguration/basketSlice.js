@@ -18,7 +18,7 @@ const initialState = cartAdapter.getInitialState({
 export const fetchCartProducts = createAsyncThunk(
     'cart/fetchCartProducts',
     async () => {
-        const response = await fetch("http://localhost:8000/cart");
+        const response = await fetch("https://my-json-server.typicode.com/JavadRafieii/database/cart");
         const data = await response.json();
         return data;
     }
@@ -27,7 +27,7 @@ export const fetchCartProducts = createAsyncThunk(
 export const addNewProduct = createAsyncThunk(
     'cart/addNewProduct',
     async (newProduct) => {
-        const response = await fetch("http://localhost:8000/cart", {
+        const response = await fetch("https://my-json-server.typicode.com/JavadRafieii/database/cart", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export const addNewProduct = createAsyncThunk(
 export const deleteProduct = createAsyncThunk(
     'cart/deleteProduct',
     async (id) => {
-        const response = await fetch(`http://localhost:8000/cart/${id}`, {
+        const response = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/cart/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ export const deleteProduct = createAsyncThunk(
 export const updateProductQuantity = createAsyncThunk(
     'cart/updateProductQuantity',
     async ({ id, productQuantity }) => {
-        const response = await fetch(`http://localhost:8000/cart/${id}`, {
+        const response = await fetch(`https://my-json-server.typicode.com/JavadRafieii/database/cart/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
