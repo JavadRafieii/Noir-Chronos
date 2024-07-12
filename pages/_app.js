@@ -7,12 +7,19 @@ import { fetchCartProducts } from "@/reduxConfiguration/basketSlice";
 import { fetchWishlist } from "@/reduxConfiguration/wishlistSlice";
 import { useEffect } from "react";
 import { useRouter } from 'next/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function App({ Component, pageProps }) {
 
   const router = useRouter();
 
   useEffect(() => {
+
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
 
     store.dispatch(fetchCartProducts());
     store.dispatch(fetchWishlist());

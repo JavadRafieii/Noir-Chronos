@@ -26,17 +26,17 @@ function SingleBlogPage({ blog }) {
                 priority
             />
             <div className="mx-auto lg:w-2/3 my-10">
-                <h1 className="font-Roboto-Bold text-white text-2xl sm:text-3xl md:text-4xl mb-2">{title}</h1>
-                <span className="block font-Roboto-Medium text-light-gray text-xs">{date}</span>
-                <button className="font-Roboto-Medium text-light-gray text-base flex items-center gap-2 my-5">
+                <h1 className="font-Roboto-Bold text-white text-2xl sm:text-3xl md:text-4xl mb-2" data-aos="fade-up">{title}</h1>
+                <span className="block font-Roboto-Medium text-light-gray text-xs" data-aos="fade-up">{date}</span>
+                <button className="font-Roboto-Medium text-light-gray text-base flex items-center gap-2 my-5" data-aos="fade-up">
                     <ShareIcon sx={{ fontSize: 20 }} />
                     <span>Share</span>
                 </button>
-                <p className="font-Roboto-Medium text-light-gray text-base">{body}</p>
+                <p className="font-Roboto-Medium text-light-gray text-base" data-aos="fade-up">{body}</p>
             </div>
             <div className="flex justify-center">
                 <Link href={"/blog"}>
-                    <button className="font-Roboto-Bold text-white text-base mb-10 flex items-center gap-1">
+                    <button className="font-Roboto-Bold text-white text-base mb-10 flex items-center gap-1" data-aos="fade-up">
                         <KeyboardBackspaceIcon />
                         Back to blog
                     </button>

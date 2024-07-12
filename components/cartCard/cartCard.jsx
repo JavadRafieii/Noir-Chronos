@@ -29,7 +29,7 @@ function CartCard({ id }) {
     const handelDeleteProduct = () => dispatch(deleteProduct(id));
 
     return (
-        <li className="grid grid-cols-12 gap-4 mb-10 last-of-type:mb-0">
+        <li className="grid grid-cols-12 gap-4 mb-10 last-of-type:mb-0" data-aos="fade-up">
             <div className="col-span-4 md:col-span-2">
                 <figure className="border-[1px] border-[#ffffff14]">
                     <img src={`/images/products/${img}-min.png`} alt="..." className="w-full" />

@@ -81,15 +81,15 @@ export default function HomePage({ products, blogs }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-20">
           <div>
             <div className="h-full flex flex-col justify-center items-start gap-5">
-              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl">Best Selling</h4>
-              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl">Discounts up to 20% are waiting for you…</h3>
-              <p className="font-Roboto-Medium text-light-gray text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
-              <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white">Explore Now</button>
+              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl" data-aos="fade-up">Best Selling</h4>
+              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl" data-aos="fade-up">Discounts up to 20% are waiting for you…</h3>
+              <p className="font-Roboto-Medium text-light-gray text-base" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
+              <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">Explore Now</button>
             </div>
           </div>
           <div>
             <figure className="relative">
-              <div className="w-[60%] relative z-0 top-10">
+              <div className="w-[60%] relative z-0 top-10" data-aos="fade-right" >
                 <Image
                   src={"/images/best-selling-2-min.png"}
                   alt="..."
@@ -100,7 +100,7 @@ export default function HomePage({ products, blogs }) {
                   style={imageStyleSelling2}
                 />
               </div>
-              <div className="w-[60%] absolute right-0 top-0">
+              <div className="w-[60%] absolute right-0 top-0" data-aos="fade-left">
                 <Image
                   src={"/images/best-selling-1-min.png"}
                   alt="..."
@@ -120,7 +120,7 @@ export default function HomePage({ products, blogs }) {
       {/* Elite elegance section */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-          <div className="order-2 md:order-1">
+          <div className="order-2 md:order-1" data-aos="fade-right">
             <figure>
               <Image
                 src={"/images/elite-elegance-min.png"}
@@ -135,12 +135,12 @@ export default function HomePage({ products, blogs }) {
           </div>
           <div className="order-1 md:order-2">
             <div className="h-full flex flex-col justify-center items-start gap-5">
-              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl">Elite Elegance</h4>
-              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl">Timepieces, Beyond Imagination</h3>
-              <p className="font-Roboto-Medium text-light-gray text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
+              <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl" data-aos="fade-up">Elite Elegance</h4>
+              <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl" data-aos="fade-up">Timepieces, Beyond Imagination</h3>
+              <p className="font-Roboto-Medium text-light-gray text-base" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
               <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row sm:items-center md:items-start lg:items-center gap-3">
-                <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white">SHOP MEN'S WATCHES</button>
-                <button className="bg-dark-gray py-3 px-6 rounded-md font-Roboto-light text-sm text-white border duration-[.5s] hover:bg-white hover:text-dark-gray">SHOP WOMEN'S WATCHES</button>
+                <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">SHOP MEN'S WATCHES</button>
+                <button className="bg-dark-gray py-3 px-6 rounded-md font-Roboto-light text-sm text-white border duration-[.5s] hover:bg-white hover:text-dark-gray" data-aos="fade-up">SHOP WOMEN'S WATCHES</button>
               </div>
             </div>
           </div>
@@ -151,8 +151,8 @@ export default function HomePage({ products, blogs }) {
       {/* Trending products section */}
       <div className="py-10">
         <Container>
-          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Best Selling</h4>
-          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center my-5">TRENDING PRODUCTS</h3>
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center" data-aos="fade-up">Best Selling</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center my-5" data-aos="fade-up">TRENDING PRODUCTS</h3>
         </Container>
         <TrendingProducts products={products} />
       </div>
@@ -186,8 +186,8 @@ export default function HomePage({ products, blogs }) {
       {/* 360° Collection section */}
       <div className="pb-10 pt-16">
         <Container>
-          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">360° Collection</h4>
-          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">LIMITED EDITION</h3>
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center" data-aos="fade-up">360° Collection</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10" data-aos="fade-up">LIMITED EDITION</h3>
         </Container>
         <LimitedProducts products={products} />
       </div>
@@ -196,8 +196,8 @@ export default function HomePage({ products, blogs }) {
       {/* Blog section */}
       <Container>
         <div className="py-10">
-          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center">Happenings Around</h4>
-          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10">Blog posts</h3>
+          <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl text-center" data-aos="fade-up">Happenings Around</h4>
+          <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mt-5 mb-10" data-aos="fade-up">Blog posts</h3>
           <Blogs blogs={blogs} />
         </div>
       </Container>

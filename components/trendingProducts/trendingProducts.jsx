@@ -39,7 +39,7 @@ function TrendingProducts({ products }) {
 
     return (
         <TabContext value={value}>
-            <StyledTabList onChange={handleChange} aria-label="lab API tabs example">
+            <StyledTabList onChange={handleChange} aria-label="lab API tabs example" data-aos="fade-up">
                 <Tab label="MEN LUXURY" value="1" />
                 <Tab label="WOMEN LUXURY" value="2" />
                 <Tab label="UNISEX LUXURY" value="3" />

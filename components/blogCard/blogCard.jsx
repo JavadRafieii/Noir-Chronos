@@ -13,7 +13,7 @@ function BlogCard({ blog }) {
 
     return (
         <Link href={`/blog/${id}`}>
-            <div className="hover:border-[1px] hover:border-shellfish hover:bg-[#1b1b1b]">
+            <div className="hover:border-[1px] hover:border-shellfish hover:bg-[#1b1b1b]" data-aos="fade-up">
                 <figure>
                     <Image
                         src={`/images/${img}-min.png`}

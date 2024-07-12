@@ -6,7 +6,7 @@ function OtherProducts({ products, type }) {
 
     return (
         <div className="my-10">
-            <h2 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mb-10">You may also like</h2>
+            <h2 className="font-Roboto-Bold text-white text-3xl xl:text-4xl text-center mb-10" data-aos="fade-up">You may also like</h2>
             <Swiper
                 slidesPerView={1.5}
                 spaceBetween={20}

@@ -40,9 +40,9 @@ function Footer() {
         <footer>
             <div className="bg-[url('/images/banner-4-min.png')] bg-cover bg-center py-20">
                 <Container>
-                    <h4 className="font-Roboto-Bold text-white text-3xl lg:text-4xl text-center">Subscribe to our emails</h4>
-                    <p className="font-Roboto-Light text-light-gray text-base text-center my-5">Be the first to know about new collections and exclusive offers.</p>
-                    <div className="flex justify-center">
+                    <h4 className="font-Roboto-Bold text-white text-3xl lg:text-4xl text-center" data-aos="fade-up">Subscribe to our emails</h4>
+                    <p className="font-Roboto-Light text-light-gray text-base text-center my-5" data-aos="fade-up">Be the first to know about new collections and exclusive offers.</p>
+                    <div className="flex justify-center" data-aos="fade-up">
                         <StyledTextField
                             label="Email"
                             variant="outlined"
@@ -61,7 +61,7 @@ function Footer() {
             </div>
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
-                    <div>
+                    <div data-aos="fade-up">
                         <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="flex items-center gap-x-2 duration-[.5s] hover:text-golden">
@@ -78,7 +78,7 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">FAQ </li>
@@ -88,7 +88,7 @@ function Footer() {
                             <li className="duration-[.5s] hover:text-golden">Track Your Order</li>
                         </ul>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">Shipping Policy</li>
@@ -97,7 +97,7 @@ function Footer() {
                             <li className="duration-[.5s] hover:text-golden">Privacy Policy</li>
                         </ul>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">Share contact information, store details, and brand content with your customers.</li>
