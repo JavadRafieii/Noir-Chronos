@@ -23,7 +23,7 @@ function WishlistCard({ id }) {
         <li className="grid grid-cols-12">
             <div className="col-span-4">
                 <Link href={`/products/${id}`}>
-                <img src={`/images/products/${img}.png`} alt="..." />
+                <img src={`/images/products/${img}-min.png`} alt="..." />
                 </Link>
             </div>
             <div className="col-span-6 flex flex-col justify-center">

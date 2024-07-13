@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function MainSlider() {
     return (
@@ -37,7 +38,9 @@ function MainSlider() {
                         <div>
                             <h4 className="font-Sacramento-Regular text-4xl sm:text-5xl lg:text-6xl text-golden">Style Ascent</h4>
                             <h1 className="font-Roboto-Bold text-4xl sm:text-5xl lg:text-6xl text-white leading-[3rem] sm:leading-[3.5rem] lg:leading-[4rem] my-3 sm:my-4 lg:my-5">Elevate Your Wrist <br /> Game Now</h1>
-                            <button className="bg-white py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray">SHOP NOW</button>
+                            <Link href={"/products"}>
+                                <button className="bg-white py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray">SHOP NOW</button>
+                            </Link>
                         </div>
                     </figcaption>
                 </figure>
@@ -57,12 +60,14 @@ function MainSlider() {
                         <div className="flex flex-col items-center">
                             <h4 className="font-Sacramento-Regular text-4xl sm:text-5xl lg:text-6xl text-golden">Refined Sophistication</h4>
                             <h1 className="font-Roboto-Bold text-4xl sm:text-5xl lg:text-6xl text-white text-center leading-[3rem] sm:leading-[3.5rem] lg:leading-[4rem] my-3 sm:my-4 lg:my-5">Crafted Elegance for <br /> Every Wrist</h1>
-                            <button className="bg-white py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray">SHOP NOW</button>
+                            <Link href={"/products"}>
+                                <button className="bg-white py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray">SHOP NOW</button>
+                            </Link>
                         </div>
                     </figcaption>
                 </figure>
             </SwiperSlide>
-        </Swiper>
+        </Swiper >
     );
 };
 

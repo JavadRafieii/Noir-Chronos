@@ -79,7 +79,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div data-aos="fade-up">
-                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
+                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Customer Care</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">FAQ </li>
                             <li className="duration-[.5s] hover:text-golden">Size Guide</li>
@@ -89,7 +89,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div data-aos="fade-up">
-                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
+                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Store Policy</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">Shipping Policy</li>
                             <li className="duration-[.5s] hover:text-golden">Return Policy</li>
@@ -98,7 +98,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div data-aos="fade-up">
-                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Get in touch</h5>
+                        <h5 className="font-Roboto-Bold text-white text-lg mb-5">Our mission</h5>
                         <ul className="font-Roboto-Light text-light-gray flex flex-col gap-4">
                             <li className="duration-[.5s] hover:text-golden">Share contact information, store details, and brand content with your customers.</li>
                         </ul>

@@ -7,6 +7,7 @@ import BannerCard from "@/components/bannerCard/bannerCard";
 import LimitedProducts from "@/components/limitedProducts/limitedProducts";
 import Blogs from "@/components/blogs/blogs";
 import TextSlider from "@/components/textSlider/textSlider";
+import Link from "next/link";
 
 const imageStyleSelling1 = {
   width: "100%",
@@ -84,7 +85,9 @@ export default function HomePage({ products, blogs }) {
               <h4 className="font-Sacramento-Regular text-golden text-4xl xl:text-5xl" data-aos="fade-up">Best Selling</h4>
               <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl" data-aos="fade-up">Discounts up to 20% are waiting for you…</h3>
               <p className="font-Roboto-Medium text-light-gray text-base" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
-              <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">Explore Now</button>
+              <Link href={"/products"}>
+                <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">Explore Now</button>
+              </Link>
             </div>
           </div>
           <div>
@@ -139,8 +142,12 @@ export default function HomePage({ products, blogs }) {
               <h3 className="font-Roboto-Bold text-white text-3xl xl:text-4xl" data-aos="fade-up">Timepieces, Beyond Imagination</h3>
               <p className="font-Roboto-Medium text-light-gray text-base" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae quia quidem neque, voluptate laborum.</p>
               <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row sm:items-center md:items-start lg:items-center gap-3">
-                <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">SHOP MEN'S WATCHES</button>
-                <button className="bg-dark-gray py-3 px-6 rounded-md font-Roboto-light text-sm text-white border duration-[.5s] hover:bg-white hover:text-dark-gray" data-aos="fade-up">SHOP WOMEN'S WATCHES</button>
+                <Link href={"/products"}>
+                  <button className="bg-golden py-3 px-6 rounded-md font-Roboto-light text-sm text-dark-gray duration-[.5s] hover:bg-white" data-aos="fade-up">SHOP MEN'S WATCHES</button>
+                </Link>
+                <Link href={"/products"}>
+                  <button className="bg-dark-gray py-3 px-6 rounded-md font-Roboto-light text-sm text-white border duration-[.5s] hover:bg-white hover:text-dark-gray" data-aos="fade-up">SHOP WOMEN'S WATCHES</button>
+                </Link>
               </div>
             </div>
           </div>

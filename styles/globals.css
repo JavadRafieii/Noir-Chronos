@@ -74,6 +74,10 @@
 /* Added Sacramento Font */
 
 /* Added bacground color to body */
+#__next {
+    overflow: hidden;
+}
+
 body {
     @apply bg-dark-gray
 }
